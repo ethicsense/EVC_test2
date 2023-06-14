@@ -1,0 +1,8 @@
+# ignore model zip file
+# model.tar.gz
+
+# ignore dataset origin dir
+datasets/
+
+# ignore test codes
+practice/

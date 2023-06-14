@@ -1,0 +1,58 @@
+## configuration file for running EVC
+
+# EVC가 수행할 작업
+activation: train # or "pred"
+# 클러스터 그룹명
+group:
+  - &group1 keti_test_rpi
+  - &group2 keti_test_nuc
+# 작업을 수행할 노드
+target:
+  *group1:
+  -   name: rpi6402
+      ip: 123.214.186.192
+      port: 39002
+      hw: rpi
+      os: linux
+      gpu: None
+    # your edge node
+  -   name: rpi6403
+      ip: 123.214.186.192
+      port: 39003
+      hw: rpi
+      os: linux
+      gpu: None
+  -   name: rpi6404
+      ip: 123.214.186.192
+      port: 39004
+      hw: rpi
+      os: linux
+      gpu: None
+  -   name: rpi6405
+      ip: 123.214.186.192
+      port: 39005
+      hw: rpi
+      os: linux
+      gpu: None
+  *group2:
+  -   name: n02
+      ip: 123.214.186.192
+      port: 33322
+      hw: intel_NUC
+      os: ubuntu
+      gpu: RTX2080
+# 노드 소유자 명
+owner: keti # host name
+
+## AI 모델 정보
+# 모델 이름
+model_name: gitlink_test2_pd # your_model
+# 모델 버전
+version: v1.0
+# 모델이 수행하는 태스크
+task: detection # i.e. classification, segmentation
+# 엣지 노드의 CPU 아키텍처
+arch: aarch64 # i.e. x86_64, aarch64
+# 학습 혹은 추론 대상 데이터
+data: /home/plate_detection_data.yaml
+
