@@ -22,12 +22,12 @@ target:
       hw: rpi
       os: linux
       gpu: None
-  -   name: rpi6404
-      ip: 123.214.186.192
-      port: 39004
-      hw: rpi
-      os: linux
-      gpu: None
+  # -   name: rpi6404
+  #     ip: 123.214.186.192
+  #     port: 39004
+  #     hw: rpi
+  #     os: linux
+  #     gpu: None
   -   name: rpi6405
       ip: 123.214.186.192
       port: 39005
