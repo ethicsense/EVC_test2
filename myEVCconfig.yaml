@@ -5,7 +5,7 @@ activation: train # or "pred"
 # 클러스터 그룹명
 group:
   - &group1 keti_test_rpi
-  - &group2 keti_test_nuc
+  # - &group2 keti_test_nuc
 # 작업을 수행할 노드
 target:
   *group1:
@@ -34,13 +34,13 @@ target:
       hw: rpi
       os: linux
       gpu: None
-  *group2:
-  -   name: n02
-      ip: 123.214.186.192
-      port: 33322
-      hw: intel_NUC
-      os: ubuntu
-      gpu: RTX2080
+  # *group2:
+  # -   name: n02
+  #     ip: 123.214.186.192
+  #     port: 33322
+  #     hw: intel_NUC
+  #     os: ubuntu
+  #     gpu: RTX2080
 # 노드 소유자 명
 owner: keti # host name
 
