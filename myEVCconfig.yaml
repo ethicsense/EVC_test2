@@ -48,7 +48,7 @@ owner: keti # host name
 # 모델 이름
 model_name: evc-con-test # your_model
 # 모델 버전
-version: v1.0
+version: 1.1
 # 모델이 수행하는 태스크
 task: detection # i.e. classification, segmentation
 # 엣지 노드의 CPU 아키텍처
